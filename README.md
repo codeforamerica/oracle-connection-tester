@@ -8,4 +8,4 @@ Copy `config.json.sample` to `config.json` and set the variables within:
 
 `oracle_database` is the name of the database on the server.
 
-`oracle_username` and `oracle_password` are the credentials we will use to authenticate with the SQL database.
+`oracle_username` and `oracle_password` are the credentials we will use to authenticate with the database.
