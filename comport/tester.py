@@ -12,10 +12,9 @@ class Tester:
         self.config['oracle_password'] = config_values['oracle_password']
 
     def get_database_connection(self):
-        ''' Connect to the database, return the cursor.
+        ''' Connect to the database, return the connection.
         '''
         # Connect to the database server.
-        # iapro-oracle.cr87k6k55djc.us-east-1.rds.amazonaws.com:1521/IAPRODB
         dsn_tns = cx_Oracle.makedsn(self.config['oracle_host'], self.config['oracle_port'], self.config['oracle_database'])
         conn = cx_Oracle.connect(self.config['oracle_username'], self.config['oracle_password'], dsn_tns)
         return conn
