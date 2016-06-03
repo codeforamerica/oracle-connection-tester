@@ -4,7 +4,7 @@ from cx_Freeze import setup, Executable
 build_options = dict(
     packages=['decimal'],
     excludes=[],
-    include_files=['config.json', 'launch.bat']
+    include_files=['config.json.sample', 'launch.bat']
 )
 
 bdist_msi_options = dict(
