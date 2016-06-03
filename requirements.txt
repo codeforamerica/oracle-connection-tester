@@ -1,0 +1,2 @@
+cx-Oracle==5.2.1
+cx-Freeze==4.3.4

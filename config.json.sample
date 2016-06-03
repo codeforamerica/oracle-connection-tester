@@ -1,0 +1,7 @@
+{
+    "oracle_host": "",
+    "oracle_port": 1521,
+    "oracle_database": "",
+    "oracle_username": "",
+    "oracle_password": ""
+}
