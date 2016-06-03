@@ -26,10 +26,15 @@ class Tester:
         print("* Trying to connect to Oracle database: {host}:{port}/{db} as {username}".format(host=self.config['oracle_host'], port=self.config['oracle_port'], db=self.config['oracle_database'], username=self.config['oracle_username']))
 
         # make a connection to the database
-        conn = self.get_database_connection()
+        try:
+            conn = self.get_database_connection()
 
-        print("* Successful connection to database with version {}!".format(conn.version))
+        except cx_Oracle.DatabaseError as err:
+            errargs, = err.args
+            print("* ERROR: {}".format(errargs.message))
 
-        # Close the database connection.
-        conn.close()
-        print("* Closed connection to Oracle database.")
+        else:
+            print("* Successful connection to database with version {}!".format(conn.version))
+            # Close the database connection.
+            conn.close()
+            print("* Closed connection to Oracle database.")
