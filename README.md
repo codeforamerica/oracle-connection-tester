@@ -21,6 +21,7 @@ If you don't already have an Oracle client installed on the machine:
 - Unzip the SDK and copy the `sdk` folder into that directory; so it will be at `C:\Oracle\instantclient_11_1\sdk`
 
 Create an `ORACLE_HOME` environment variable that contains the Instant Client path:
+
 1. `Control Panel` -> `System and Security` -> `System`
 2. Click `Advanced System Settings` in the left panel
 3. Click the `Environment Variables...` button
@@ -28,6 +29,7 @@ Create an `ORACLE_HOME` environment variable that contains the Instant Client pa
 5. Create a new variable named `ORACLE_HOME` and set its value to the client path, like `C:\Oracle\instantclient_11_1\`
 
 And add that same path to the end of the `PATH` environment variable:
+
 1. In the Environment Variables window (after steps 1-3 above), select the `Path` system variable in the bottom scroll window and click `Edit...`
 2. To the end of `Variable` value, add the client path, like `;C:\Oracle\instantclient_11_1\`
 
