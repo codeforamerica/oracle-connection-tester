@@ -4,7 +4,8 @@ from cx_Freeze import setup, Executable
 build_options = dict(
     packages=['decimal'],
     excludes=[],
-    include_files=['config.json.sample', 'launch.bat']
+    include_files=['config.json.sample', 'launch.bat'],
+    include_msvcr=True
 )
 
 bdist_msi_options = dict(
@@ -19,7 +20,7 @@ executables = [
 
 setup(
     name='comport-connection-test',
-    version='0.1.1',
+    version='0.1.2',
     description='Tests connection to an Oracle database.',
     options=dict(build_exe=build_options, bdist_msi=bdist_msi_options),
     executables=executables
